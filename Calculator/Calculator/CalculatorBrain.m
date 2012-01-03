@@ -46,6 +46,9 @@
     else if ([@"/" isEqualToString:operation]){
         result = [self popOperand] / [self  popOperand];
     }
+    else if ([@"sqrt" isEqualToString:operation]){
+        result = sqrt([self popOperand]);
+    }
     [self pushOperand:result];
     return result;
 }
